@@ -33,5 +33,5 @@ jobs:
         if: github.ref_type == 'tag'
         with:
           files: |
-            dist/*
+            dist/sops-checker*
             LICENSE
