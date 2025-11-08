@@ -1,6 +1,6 @@
 [project]
 name = "sops-checker"
-version = "0.1.4"
+version = "0.1.5"
 description = "Validate that files matched by .sops.yaml creation_rules are SOPS-encrypted."
 readme = "README.md"
 requires-python = ">=3.8"
