@@ -1,0 +1,21 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+.uv/
+
+# Build outputs
+build/
+dist/
+*.egg-info/
+
+# uv cache override
+.uv-cache/
+
+# macOS
+.DS_Store

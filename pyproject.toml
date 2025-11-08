@@ -1,0 +1,54 @@
+[project]
+name = "sops-checker"
+version = "0.1.4"
+description = "Validate that files matched by .sops.yaml creation_rules are SOPS-encrypted."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { file = "LICENSE" }
+authors = [{ name = "Sergey Putko" }]
+keywords = ["sops", "encryption", "devsecops", "cli"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Security :: Cryptography",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+]
+
+# after change this deps list please run `uv lock` or `uv lock --upgrade` for upgrade
+dependencies = [
+    "PyYAML>=6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3.5",
+    "ruff>=0.5.0",
+    "yamllint>=1.35.0",
+]
+
+[project.scripts]
+sops-checker = "sops_checker.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/psvmcc/sops-checker"
+"Bug Tracker" = "https://github.com/psvmcc/sops-checker/issues"
+Changelog = "https://github.com/psvmcc/sops-checker/releases"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/sops_checker"]
+
+[tool.hatch.build.targets.sdist]
+include = ["README.md", "LICENSE", "src"]
