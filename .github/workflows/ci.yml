@@ -30,4 +30,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Run Pytest
-        run: uv run pytest --maxfail=1 --disable-warnings -q
+        run: uv run pytest -v
