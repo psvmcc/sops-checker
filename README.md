@@ -1,6 +1,6 @@
 # sops-checker
 
-`sops-checker` inspects the `creation_rules` in `.sops.yaml` and verifies that each matching file already looks SOPS-encrypted. It can optionally encrypt files in place via `sops --encrypt --in-place`.
+`sops-checker` inspects the `creation_rules` in `.sops.yaml` and verifies that each matching file already looks SOPS-encrypted. It can optionally encrypt files in place via `sops --encrypt --in-place`. You can grab the latest release from [PyPI](https://pypi.org/project/sops-checker/).
 
 > Built collaboratively with OpenAI Codex to streamline packaging and release prep.
 
